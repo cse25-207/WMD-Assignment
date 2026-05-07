@@ -16,44 +16,123 @@
     <a href="contact.html">Contact</a>
     <a href="feedback.html">Feedback</a>
   </nav>
+
 </header>
 
-<section class="content">
-  <h1>Customer Feedback</h1>
-  <p>Tell us about your experience</p>
+<main class="content">
 
-  <form>
-    <input type="text" placeholder="Your Name"><br>
-    <input type="email" placeholder="Email"><br>
-    <textarea placeholder="Your Feedback"></textarea><br>
-    <button type="submit">Submit</button>
-  </form>
-</section>
+  <section class="form-section">
+
+    <h1>Customer Feedback</h1>
+
+    <p>
+      We value your opinion. Please rate our services and leave feedback below.
+    </p>
+
+    <!-- WORKING FEEDBACK FORM -->
+    <form action="https://formsubmit.co/YOUR_EMAIL@gmail.com"
+          method="POST"
+          onsubmit="return validateFeedback()">
+
+      <!-- disable captcha -->
+      <input type="hidden"
+             name="_captcha"
+             value="false">
+
+      <!-- redirect after submit -->
+      <input type="hidden"
+             name="_next"
+             value="thankyou.html">
+
+      <input type="text"
+             id="name"
+             name="name"
+             placeholder="Your Name"
+             required>
+
+      <input type="email"
+             id="email"
+             name="email"
+             placeholder="Your Email"
+             required>
+
+      <select name="rating" required>
+        <option value="">Rate Us</option>
+        <option value="Excellent">Excellent</option>
+        <option value="Good">Good</option>
+        <option value="Average">Average</option>
+        <option value="Poor">Poor</option>
+      </select>
+
+      <textarea id="message"
+                name="message"
+                placeholder="Write your feedback..."
+                required></textarea>
+
+      <button type="submit">
+        Submit Feedback
+      </button>
+
+    </form>
+
+  </section>
+
+</main>
 
 <footer>
+
   <section class="footer-container">
+
     <article>
       <h3>Growth Point Printers</h3>
       <p>Quality printing services</p>
     </article>
 
     <article class="footer-links">
+
       <h3>Quick Links</h3>
+
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="gallery.html">Gallery</a>
       <a href="feedback.html">Feedback</a>
+
     </article>
 
     <article class="socials">
+
       <h3>Follow Us</h3>
-      <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png">
-      <img src="https://cdn-icons-png.flaticon.com/24/733/733558.png">
-      <img src="https://cdn-icons-png.flaticon.com/24/733/733585.png">
+
+      <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="">
+      <img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="">
+      <img src="https://cdn-icons-png.flaticon.com/24/733/733585.png" alt="">
+
     </article>
+
   </section>
-<p>© 2026 Growth Point Printers. All rights reserved.</p>
+
+  <p class="copyright">
+    © 2026 Growth Point Printers. All rights reserved.
+  </p>
+
 </footer>
+
+<!-- VALIDATION -->
+<script>
+
+function validateFeedback() {
+
+  let name = document.getElementById("name").value;
+
+  if(name.length < 3) {
+    alert("Name must be at least 3 characters.");
+    return false;
+  }
+
+  return true;
+}
+
+</script>
 
 </body>
 </html>
