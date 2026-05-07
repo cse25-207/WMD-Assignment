@@ -77,6 +77,22 @@ nav a:hover {
   border-radius: 5px;
 }
 
+/* SERVICES BUTTON */
+.services-btn {
+  background: orange;
+}
+
+.services-btn:hover {
+  background: darkorange;
+}
+
+/* FEEDBACK BUTTON */
+.feedback-btn {
+  background: #00c3ff;
+}
+
+.feedback-btn:hover {
+  background: #0099cc;
 /* CONTENT */
 .content {
   padding: 60px 40px;
