@@ -16,42 +16,118 @@
     <a href="contact.html">Contact</a>
     <a href="feedback.html">Feedbak</a>
   </nav>
+
 </header>
 
-<section class="content">
-  <h1>Contact Us</h1>
-  <form>
-    <input type="text" placeholder="Your Name"><br>
-    <input type="email" placeholder="Email"><br>
-    <textarea placeholder="Message"></textarea><br>
-    <button type="submit">Send</button>
-  </form>
-</section>
+<main class="content">
+
+  <section class="form-section">
+
+    <h1>Contact Us</h1>
+
+    <p>
+      Have questions or want to work with us?
+      Send us a message below.
+    </p>
+
+    <!-- WORKING FORM -->
+    <form action="https://formsubmit.co/YOUR_EMAIL@gmail.com"
+          method="POST"
+          onsubmit="return validateForm()">
+
+      <!-- Disable Captcha -->
+      <input type="hidden"
+             name="_captcha"
+             value="false">
+
+      <!-- Redirect after submit -->
+      <input type="hidden"
+             name="_next"
+             value="thankyou.html">
+
+      <input type="text"
+             id="name"
+             name="name"
+             placeholder="Your Name"
+             required>
+
+      <input type="email"
+             id="email"
+             name="email"
+             placeholder="Your Email"
+             required>
+
+      <textarea id="message"
+                name="message"
+                placeholder="Your Message"
+                required></textarea>
+
+      <button type="submit">
+        Send Message
+      </button>
+
+    </form>
+
+  </section>
+
+</main>
 
 <footer>
-  <div class="footer-container">
-    <div>
-      <h3>PrintBiz</h3>
-      <p>Quality printing services</p>
-    </div>
 
-    <div class="footer-links">
+  <section class="footer-container">
+
+    <article>
+      <h3>Growth Point Printers</h3>
+      <p>Quality printing services</p>
+    </article>
+
+    <article class="footer-links">
+
       <h3>Quick Links</h3>
+
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="gallery.html">Gallery</a>
       <a href="feedback.html">Feedback</a>
-    </div>
 
-    <div class="socials">
+    </article>
+
+    <article class="socials">
+
       <h3>Follow Us</h3>
-      <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png">
-      <img src="https://cdn-icons-png.flaticon.com/24/733/733558.png">
-      <img src="https://cdn-icons-png.flaticon.com/24/733/733585.png">
-    </div>
-  </div>
-<p>© 2026 Printing Company</p>
+
+      <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="">
+      <img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="">
+      <img src="https://cdn-icons-png.flaticon.com/24/733/733585.png" alt="">
+
+    </article>
+
+  </section>
+
+  <p class="copyright">
+    © 2026 Growth Point Printers. All rights reserved.
+  </p>
+
 </footer>
+
+<!-- VALIDATION SCRIPT -->
+<script>
+
+function validateForm() {
+
+  let name = document.getElementById("name").value;
+
+  if(name.length < 3) {
+
+    alert("Name must be at least 3 characters.");
+
+    return false;
+  }
+
+  return true;
+}
+
+</script>
 
 </body>
 </html>
