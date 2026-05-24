@@ -41,6 +41,7 @@ nav a:hover {
   padding-bottom: 5px;
 }
 
+
 /* HERO */
 .hero {
   position: relative;
@@ -77,19 +78,23 @@ nav a:hover {
   border-radius: 5px;
 }
 
+
 /* SERVICES BUTTON */
 .services-btn {
   background: orange;
 }
 
+
 .services-btn:hover {
   background: darkorange;
 }
+
 
 /* FEEDBACK BUTTON */
 .feedback-btn {
   background: #00c3ff;
 }
+
 
 .feedback-btn:hover {
   background: #0099cc;
@@ -108,6 +113,7 @@ nav a:hover {
   gap: 20px;
 }
 
+
 .card {
   background: white;
   padding: 20px;
@@ -115,12 +121,14 @@ nav a:hover {
   border-radius: 10px;
 }
 
+
 /* GALLERY */
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
+
 
 .gallery img {
   width: 100%;
@@ -130,9 +138,11 @@ nav a:hover {
   transition: 0.3s;
 }
 
+
 .gallery img:hover {
   transform: scale(1.03);
 }
+
 
 /* QUICK LINKS */
 .quick-links {
@@ -140,20 +150,24 @@ nav a:hover {
   padding: 30px;
 }
 
+
 .quick-links a {
   display: block;
   margin: 10px 0;
   color: #333;
 }
 
+
 /* FORM */
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+form input, form textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
 }
 
+
 button {
+ background: linear-gradient(45deg, #ff8c00, #ff3c00);
   padding: 12px 22px;
   color: white;
   border: none;
@@ -162,6 +176,8 @@ button {
   transition: 0.3s;
   font-weight: bold;
 }
+
+
 /* FOOTER */
 footer {
   background: #111;
@@ -170,10 +186,12 @@ footer {
  text-align: center;
 }
 
+
 footer p {
 margin: 0;
 font-size: 14px;
 }
+
 
 .footer-container {
   display: flex;
@@ -182,6 +200,7 @@ font-size: 14px;
   gap: 30px;
 }
 
+
 .footer-links a {
   display: block;
   color: white;
@@ -189,19 +208,24 @@ font-size: 14px;
   margin: 5px 0;
 }
 
+
 .socials img {
   width: 25px;
   margin: 5px;
 }
+
+
 .services-hero {
   text-align: center;
   padding: 50px;
   background: #f4f6f9;
 }
 
+
 .services-hero h1 {
   font-size: 40px;
 }
+
 
 .services-grid {
   display: grid;
@@ -209,6 +233,7 @@ font-size: 14px;
   gap: 25px;
   padding: 40px;
 }
+
 
 .service-card {
   background: white;
@@ -218,6 +243,7 @@ font-size: 14px;
   text-align: center;
   transition: 0.3s;
 }
+
 
 .service-card img {
   width: 100%;
@@ -229,14 +255,17 @@ font-size: 14px;
   margin: 10px 0;
 }
 
+
 .service-card p {
   padding: 0 10px 20px;
   font-size: 14px;
 }
 
+
 .service-card:hover {
   transform: translateY(-5px);
 }
+
 
 @media (max-width: 768px) {
 
@@ -245,20 +274,24 @@ font-size: 14px;
     text-align: center;
   }
 
+ 
   nav {
     flex-direction: column;
     margin-top: 10px;
   }
+
 
   .cards {
     flex-direction: column;
     align-items: center;
   }
 
+
   .footer-container {
     flex-direction: column;
     text-align: center;
   }
+
 
   .hero-text h1 {
     font-size: 32px;
